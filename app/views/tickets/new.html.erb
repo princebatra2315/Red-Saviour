@@ -1,0 +1,36 @@
+<h1>Update data</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+   
+  <%= form_for(@ticket, url: ticket_url) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    
+      <h5>Category A+</h5>
+      <%= f.text_field :category2,  class: 'form-control'%>
+
+      <h5>Category A-</h5>
+      <%= f.text_field :category3,class: 'form-control' %>
+     
+      <h5>Category B+</h5>
+      <%= f.text_field :category4,class: 'form-control'%>
+
+      <h5>Category B-</h5>
+      <%= f.text_field :category5,class: 'form-control'%>
+
+      <h5>Category AB+</h5>
+      <%= f.text_field :category6,class: 'form-control'%>
+
+       <h5>Category AB-</h5>
+      <%= f.text_field :category7,class: 'form-control'%>
+
+      <h5>Category O+</h5>
+      <%= f.text_field :category8,class: 'form-control'%>
+
+      <h5>Category O-</h5>
+      <%= f.text_field :category9,class: 'form-control'%>
+    
+      <%= f.submit "Create new Update", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

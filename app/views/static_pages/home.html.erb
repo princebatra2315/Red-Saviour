@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+              <section class="stats">
+        <% render 'shared/stats' %>
+      </section>
+
+
+      <section class="micropost_form">
+        <% render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<div class="row">
+    <aside class="col-md-6 col-md-offset-3">
+      <section class="user_info">
+        <% render 'shared/user_info' %>
+      </section>
+              <section class="stats">
+        <% render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+   $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(700)
+    .next()
+    .fadeIn(700)
+    .end()
+    .appendTo('#slideshow');
+},  2100);
+   </script>
+   <img src="1.jpg" style="display:inline; float:left; width:150px; height:90px; ">
+   <div id="header">
+
+   <h1  style="margin:10px;color:#fff; font-size:250%;text-align:center;font-family:century Gothic;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);">Red Saviour</h1>
+ </div>
+ </head>
+<body style="background-color:#ffffff;margin:0px;font-family:Verdana,Helvetica;font-size:14px;">
+ <div id="para1"style="background-color:#7bd1cc;margin:10px 0px 10px 0px;color:#fff;font-style:bold;font-size:160%;border-radius:5px;padding:20px;">
+<p>We are a community of passionate people whose motto is to use the power of the Internet to help common people .Saviour for red is a non-profit, non-commercial interface which was born out of our social commitment and our desire to reduce the death rate due to lack of blood .</p>
+
+</div>
+<div id="slideshow">
+   <div>
+     <img src="2.jpg" style="width: 640px; height: 400px;">
+   </div>
+   <div>
+     <img src="d1.jpg" style="width: 640px; height: 400px;">
+   </div>
+   <div>
+     <img src="3.jpg" style="width: 640px; height: 400px;">
+   </div>
+</div>
+<div class="row">
+<div id="us">
+<h1 style="background-color:#3b5998; margin:10px 0px 10px 0px; padding:10px; color:#fff"> Why us?</h1><br>
+<div  class="blog">
+  <h2>Nearest location</h2>
+  <p> We provide fastest service by figuring out the nearest blood bank around your area .</p>
+</div>
+
+<div class="blog" >
+  <h2> Notification Service</h2>
+  <p>As soon as acceptor will request for required blood group we will send the e-mail to all blood banks.</p>
+</div>
+<div class="blog" >
+  <h2>Updated information</h2>
+  <p>We ensure that our website statistics are updated regularly for the convenience of the needy.</p>
+</div>
+<div class="blog" >
+  <h2>Automated Data Maintenance</h2>
+  <p>Data is maintained through which if blood is low in some category all the blood donors will recieve a message for donation of blood.</p>
+</div>
+
+
+</div>
+</div>
+</body>
+  <% end %>
+</html>

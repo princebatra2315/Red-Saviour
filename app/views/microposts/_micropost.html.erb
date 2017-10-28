@@ -1,0 +1,22 @@
+
+      <div style="display:block ; border: 2px solid black; margin:2px; padding:5px">
+         <p style="color: #61d8b8;"> Category</p>
+         <%= micropost.origin %>
+         <p style="color: #61d8b8;">Quantity</p>
+         <%= micropost.destination %>
+         <p style="color: #61d8b8;">Area</p>
+         <%=  micropost.budget %>
+         <% if micropost.content? %>
+         <p style="color: #61d8b8;">comment</p>
+         <%= micropost.content %>
+         <% end %>
+         <li><%= link_to "View your match", '/match' %></li>
+       </div>
+
+     <span class="timestamp setfourth">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    <% if  current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
