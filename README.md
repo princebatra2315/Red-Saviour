@@ -1,6 +1,6 @@
 # Red-Saviour
 
-*Website based on ruby on rails framework and is an integrated platform for all blood banks and donors as well as acceptors.*
+*Website based on ruby on rails framework and is an integrated  platform for all blood banks and donors as well as acceptors.*
 
 Problem Statement ->
   1. There exists many blood bank websites but there is a limitation like the unavailability of donors 24x7.
